@@ -2,11 +2,16 @@ Attribute VB_Name = "modConexion"
 Option Explicit
 
 Sub ConectarSQL()
+Dim cadServidor As String
+Dim cadBD As String
+
+cadServidor = "(localdb)\MSSQLLocalDB"
+cadBD = "Restaurante"
 '------------------
 'CADENA DE CONEXION
 '------------------
-gCnx = "Provider=MSOLEDBSQL;Server=(localdb)\MSSQLLocalDB;" & _
-       "Database=Restaurante;Trusted_Connection=Yes;"
+gCnx = "Provider=MSOLEDBSQL;Server=" & cadServidor & ";" & _
+       "Database=" & cadBD & ";Trusted_Connection=Yes;"
 '------------------
 Set gRs = New ADODB.Recordset
 Exit Sub
