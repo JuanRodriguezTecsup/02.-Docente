@@ -1,3 +1,6 @@
+# Autor
+Juan Felix Rodriguez Sanchez
+
 # Proyecto
 Sistema de VBA + SQL Server
 
