@@ -34,6 +34,17 @@ Call gRs.Open(gSQL, gCnx, adOpenForwardOnly, adLockOptimistic)
 Call modConexion.CerrarSQL
 End Sub
 
+Sub ListarPlatos()
+'1. Consulta SQL
+gSQL = "SELECT Nombre,Precio FROM Platos"
+
+'2. Preparar cadena conexion
+Call modConexion.ConectarSQL
+
+'3. Ejecutar consulta SQL
+Call gRs.Open(gSQL, gCnx, adOpenForwardOnly, adLockReadOnly)
+End Sub
+
 Sub TruncarTabla()
 
 '1. Consulta en SQL
